@@ -1,0 +1,71 @@
+﻿@model MvsOrder.Models.Bid
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Вы уверены что хотите удалить?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FromCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FromAdress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromAdress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToAdress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToAdress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BidDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BidDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Вернуться к списку заказов", "Index")
+        </div>
+    }
+</div>

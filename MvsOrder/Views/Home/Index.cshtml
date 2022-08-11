@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Список заказов";
+}
+
+<h3>Существующие заявки</h3>
+<table class="table">
+    <tr>
+        <td><p><b>ID</b></p></td>
+        <td><p><b>Город отправителя</b></p></td>
+        <td><p><b>Адрес отправителя</b></p></td>
+        <td><p><b>Город получателя</b></p></td>
+        <td><p><b>Адрес получателя</b></p></td>
+        <td><p><b>Вес груза (кг)</b></p></td>
+        <td><p><b>Дата забора груза</b></p></td>
+    </tr>
+
+    @foreach (var c in ViewBag.Bids)
+    {
+        <tr>
+            <td><p>@c.BidId</p></td>
+            <td><p>@c.FromCity</p></td>
+            <td><p>@c.FromAdress</p></td>
+            <td><p>@c.ToCity</p></td>
+            <td><p>@c.ToAdress</p></td>
+            <td><p>@c.Weight</p></td>
+            <td><p>@c.BidDate</p></td>
+        </tr>
+        /*
+        <td>
+            @Html.ActionLink("Удалить", "Delete", new { id = c.BidId })
+        </td>
+        */
+    }
+</table>
+
+<div>
+    @Html.ActionLink("Создать новую заявку", "Create")
+</div>
