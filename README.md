@@ -14,5 +14,7 @@
 
 Стэк:
 ASP.NET на backend
+
 ASP.NET MVC на front
+
 Entity Framework Core
